@@ -1,0 +1,910 @@
+/* Acme Labs HRMS: Documents add-on styles */
+/* documents */
+.dwrap {
+  display: grid;
+  grid-template-columns: minmax(330px, 400px) 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.dpanel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px 0;
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+}
+.dpanel .dscroll {
+  overflow-y: auto;
+  padding-bottom: 12px;
+  margin: 0 -16px;
+  padding: 0 16px 12px;
+}
+.dpanel label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.dpanel label.chk {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 13px;
+}
+.dpanel input:not([type='checkbox']),
+.dpanel select,
+.dpanel textarea {
+  width: 100%;
+}
+.dpanel textarea {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 9px;
+  font: inherit;
+  min-height: 84px;
+  resize: vertical;
+}
+.dpanel textarea:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+.dpanel .hint {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+.dpanel .row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+}
+.dsec {
+  font-weight: 700;
+  font-size: 13px;
+  color: #111;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0 5px;
+  margin: 2px 0 10px;
+}
+.dpanel details {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 4px 0 12px;
+  background: #fafafa;
+}
+.dpanel details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.dpanel details[open] summary {
+  margin-bottom: 10px;
+}
+.dacts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  margin: 0 -16px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+}
+.dacts .btn {
+  flex: 1;
+  white-space: nowrap;
+  text-align: center;
+}
+.dview {
+  min-width: 0;
+}
+.dbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  min-height: 30px;
+}
+.dbar .pill {
+  cursor: pointer;
+}
+.dnote {
+  background: var(--half-soft);
+  border: 1px solid #e8d3a6;
+  color: #6b4a10;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.paperwrap {
+  background: #e4e6ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  overflow: auto;
+}
+.paper {
+  width: 794px;
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  transform-origin: top left;
+}
+.lh {
+  position: relative;
+  height: 111px;
+  border-bottom: 1.5px solid #888;
+  margin: 0 4px 0 4px;
+}
+.lh img {
+  position: absolute;
+  left: 11px;
+  top: 36px;
+  height: 55px;
+  width: auto;
+}
+.lh .r {
+  position: absolute;
+  right: 9px;
+  top: 17px;
+  text-align: right;
+  font-family: Cambria, 'Times New Roman', serif;
+  font-size: 13.3px;
+  line-height: 16px;
+  font-variant-numeric: lining-nums;
+}
+.lh .r .n {
+  font-family: 'DM Sans', 'Space Grotesk', Arial, sans-serif;
+  font-size: 22.7px;
+  line-height: 26px;
+  margin-bottom: 3px;
+  letter-spacing: -0.2px;
+}
+.lh .r .n span,
+.lf span {
+  color: #4075dd;
+}
+.lh .r a,
+.lf a {
+  color: #1155cc;
+  text-decoration: underline;
+}
+.lf {
+  border-top: 1.5px solid #888;
+  margin: 0 4px;
+  padding: 8px 0 22px;
+  text-align: center;
+  font-family: Cambria, 'Times New Roman', serif;
+  font-size: 14.7px;
+  line-height: 16.6px;
+  color: #111;
+  font-variant-numeric: lining-nums;
+}
+.lf .b {
+  font-family: 'DM Sans', 'Space Grotesk', Arial, sans-serif;
+}
+.lbody {
+  padding: 26px 85px 40px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  font-variant-numeric: normal;
+}
+.lbody:focus {
+  outline: 2px dashed #9db8f5;
+  outline-offset: -6px;
+}
+.lbody p {
+  margin: 0 0 12px;
+}
+.lbody ul,
+.lbody ol {
+  margin: 0 0 12px;
+  padding-left: 24px;
+}
+.lbody li {
+  margin-bottom: 3px;
+}
+.lbody .meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 4px 0 22px;
+  font-weight: 700;
+}
+.lbody .to {
+  margin: 0 0 16px;
+}
+.lbody .subj {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 6px 0 20px;
+}
+.lbody .ttl {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 8px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.lbody .twc {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+.lbody h4 {
+  font-size: 14.5px;
+  margin: 16px 0 6px;
+}
+.lbody table.st {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 12px;
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+.lbody table.st td,
+.lbody table.st th {
+  border: 1px solid #999;
+  padding: 4px 9px;
+  text-align: left;
+  white-space: normal;
+}
+.lbody table.st th {
+  background: #f2f2f2;
+  font-weight: 700;
+}
+.lbody table.st .n {
+  text-align: right;
+}
+.lbody table.st tr.t td {
+  font-weight: 700;
+  background: #f7f7f7;
+}
+.lbody .sig {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+}
+.lbody .sig > div {
+  min-width: 210px;
+}
+.lbody .sig .sp {
+  height: 52px;
+}
+.lbody .sig .r {
+  text-align: left;
+}
+.lbody .pb {
+  border-top: 2px dashed #c9ced6;
+  margin: 34px -85px 30px;
+  position: relative;
+}
+.lbody .pb::after {
+  content: 'New page';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #999;
+  font-size: 11px;
+  padding: 0 8px;
+}
+.lbody .annex {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 0 18px;
+}
+.ph {
+  background: #fff1b8;
+  color: #7a5a00;
+  border-radius: 2px;
+  padding: 0;
+  font-weight: 600;
+  box-shadow: 0 0 0 2px #fff1b8;
+}
+.dlog {
+  margin-top: 22px;
+}
+.dlog h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+@media (max-width: 1100px) {
+  .dwrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dpanel {
+    position: static;
+    max-height: none;
+  }
+}
+.lbody.pdfmode {
+  padding: 0;
+}
+.dpanel label {
+  font-weight: 400;
+}
+#navDocuments {
+  text-align: left;
+}
+/* sub-heading rows in the payroll salary table */
+.lbody table.st tr.sh td {
+  background: #fbfbfb;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+/* Documents scrolls inside the HRMS layout (main is fixed-height) */
+main > #tab-documents:not(.hide) {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+#tab-documents .dpanel {
+  top: 0;
+  max-height: calc(100dvh - 48px);
+}
+@media (max-width: 760px) {
+  main > #tab-documents:not(.hide) {
+    overflow: visible;
+  }
+}
+.lf .b {
+  color: #111;
+}
+.lf .b span {
+  color: #4075dd;
+}
+
+/* A4 page preview: 210 x 297 mm at 96 dpi, same positions as the PDF */
+.dtools {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.dtools .dtl {
+  font-weight: 600;
+  font-size: 13px;
+  margin-right: 2px;
+}
+.dtools #dPageCount {
+  margin-left: auto;
+}
+.pages {
+  width: 794px;
+  margin: 0 auto;
+}
+.pgcap {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 6px 2px;
+  font-family: Arial, sans-serif;
+}
+.a4 {
+  position: relative;
+  width: 794px;
+  height: 1123px;
+  background: #fff;
+  margin: 0 0 22px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+.a4 .lh {
+  position: absolute;
+  left: 4px;
+  right: 5px;
+  top: 0;
+  height: 110px;
+  margin: 0;
+  border-bottom: 1.4px solid #888;
+}
+.a4 .pg {
+  position: absolute;
+  left: 85px;
+  top: 138px;
+  width: 623.6px;
+  height: 880px;
+  overflow: hidden;
+}
+.a4 .pg:focus {
+  outline: 2px dashed #9db8f5;
+  outline-offset: 4px;
+}
+.a4 .pg .pb {
+  display: none;
+}
+.a4 .lf {
+  position: absolute;
+  left: 2px;
+  right: 5px;
+  top: 1047px;
+  margin: 0;
+  padding: 6px 0 0;
+  border-top: 1.4px solid #888;
+}
+.dwarn {
+  background: #fdecec;
+  border-color: #f1c2be;
+  color: #8a2a24;
+}
+
+/* signature and stamp */
+.lbody .sig .sp.spimg {
+  height: 78px;
+  position: relative;
+}
+.lbody .sig .sigimg {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  height: 62px;
+  width: 190px;
+  object-fit: contain;
+  object-position: left bottom;
+  transform-origin: left bottom;
+}
+/* the stamp stands beside the signature, on the same base line */
+.lbody .sig .stampimg {
+  position: absolute;
+  left: 200px;
+  bottom: 4px;
+  /* keeps its own shape: a round stamp is up to 86px tall, a wide "Authorised Signatory" stamp up to 170px wide */
+  height: auto;
+  width: auto;
+  max-height: 86px;
+  max-width: 170px;
+  transform-origin: left bottom;
+}
+/* in the preview both can be dragged to another place */
+#dPages .lbody .sig .sigimg,
+#dPages .lbody .sig .stampimg {
+  cursor: move;
+  touch-action: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+#dPages .lbody .sig .sigimg:hover,
+#dPages .lbody .sig .stampimg:hover,
+#dPages .lbody .sig .moving {
+  outline: 1px dashed #7b8cff;
+  outline-offset: 2px;
+}
+.asset {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  background: #fff;
+}
+.asset .ainfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12.5px;
+  min-width: 0;
+}
+.athumb {
+  height: 38px;
+  width: 76px;
+  object-fit: contain;
+  background: repeating-conic-gradient(#f1f1f1 0% 25%, #fff 0% 50%) 50%/10px 10px;
+  border-radius: 4px;
+  flex: none;
+}
+.athumb.st {
+  width: 40px;
+}
+td.asig .athumb {
+  height: 28px;
+  width: 56px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+td.asig .athumb.st {
+  width: 30px;
+}
+.assetprev {
+  margin: -4px 0 10px;
+}
+.assetprev img {
+  height: 44px;
+  max-width: 180px;
+  object-fit: contain;
+  background: repeating-conic-gradient(#f1f1f1 0% 25%, #fff 0% 50%) 50%/10px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2px;
+}
+.lbody.pdfmode .pb {
+  display: none;
+}
+.pbspace {
+  display: block;
+}
+
+/* tighter spacing steps, used only when they save a nearly empty last page */
+.lbody.dens-1 {
+  line-height: 1.45;
+}
+.lbody.dens-1 p {
+  margin-bottom: 9px;
+}
+.lbody.dens-1 .meta {
+  margin-bottom: 16px;
+}
+.lbody.dens-1 .subj {
+  margin: 4px 0 14px;
+}
+.lbody.dens-1 .sig {
+  margin-top: 20px;
+}
+.lbody.dens-1 .sig .sp {
+  height: 44px;
+}
+.lbody.dens-1 table.st td,
+.lbody.dens-1 table.st th {
+  padding: 3px 9px;
+}
+.lbody.dens-1 h4 {
+  margin: 12px 0 4px;
+}
+.lbody.dens-2 {
+  line-height: 1.38;
+  font-size: 14px;
+}
+.lbody.dens-2 p {
+  margin-bottom: 7px;
+}
+.lbody.dens-2 li {
+  margin-bottom: 1px;
+}
+.lbody.dens-2 .meta {
+  margin-bottom: 12px;
+}
+.lbody.dens-2 .subj {
+  margin: 2px 0 10px;
+}
+.lbody.dens-2 .sig {
+  margin-top: 16px;
+}
+.lbody.dens-2 .sig .sp {
+  height: 40px;
+}
+.lbody.dens-2 table.st {
+  font-size: 13px;
+}
+.lbody.dens-2 table.st td,
+.lbody.dens-2 table.st th {
+  padding: 2px 8px;
+}
+.lbody.dens-2 h4 {
+  margin: 10px 0 3px;
+}
+.lbody.dens-1 .sig .sp.spimg,
+.lbody.dens-2 .sig .sp.spimg {
+  height: 72px;
+}
+/* download buttons and status stay visible while you scroll the pages */
+.dhead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--paper, #f8f8f8);
+  padding: 4px 0 2px;
+  margin-top: -4px;
+}
+
+/* salary tables: clean format matching the Acme Labs appointment letter */
+.lbody .tcap {
+  font-weight: 700;
+  margin: 14px 0 6px;
+  font-size: 14px;
+}
+.lbody table.st {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.35;
+  table-layout: fixed;
+}
+.lbody table.st th,
+.lbody table.st td {
+  border: 1px solid #b8b8b8;
+  padding: 6px 12px;
+  background: #fff;
+  font-style: normal;
+  color: #111;
+}
+.lbody table.st th {
+  background: #f2f2f2;
+  font-weight: 700;
+}
+.lbody table.st td:first-child {
+  font-weight: 600;
+}
+.lbody table.st tr.t td {
+  font-weight: 700;
+  background: #f2f2f2;
+  border-top: 1.6px solid #777;
+}
+.lbody.dens-1 table.st th,
+.lbody.dens-1 table.st td {
+  padding: 4px 12px;
+}
+.lbody.dens-2 table.st th,
+.lbody.dens-2 table.st td {
+  padding: 3px 10px;
+}
+.lbody.dens-1 .tcap {
+  margin: 10px 0 4px;
+}
+.lbody.dens-2 .tcap {
+  margin: 8px 0 3px;
+}
+
+.lbody table.st th,
+.lbody table.st td {
+  padding: 5px 12px;
+}
+.lbody table.st tr.sub td {
+  font-weight: 400;
+  color: #333;
+  font-size: 13px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top-color: #e2e2e2;
+  border-bottom-color: #e2e2e2;
+}
+.lbody table.st tr.sub td:first-child {
+  padding-left: 30px;
+}
+.lbody.dens-1 table.st tr.sub td,
+.lbody.dens-2 table.st tr.sub td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* letters always use Arial (matches the PDF text exactly), whatever the HRMS styles say */
+.lbody,
+.lbody * {
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+.lbody th {
+  position: static !important;
+  font-size: 13px;
+}
+
+/* drag & drop upload */
+.dropzone {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 2px dashed #b9c6e8;
+  border-radius: 8px;
+  background: #f7f9ff;
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  cursor: pointer;
+  font-size: 12.5px;
+  color: #333;
+  line-height: 1.4;
+}
+.dropzone span {
+  color: var(--muted);
+}
+.dropzone .dz-ic {
+  font-size: 20px;
+  color: #4075dd;
+  flex: none;
+  width: 28px;
+  text-align: center;
+}
+.dropzone:hover,
+.dropzone:focus {
+  border-color: #4075dd;
+  outline: none;
+}
+.dropzone.over {
+  border-color: #4075dd;
+  background: #e8eeff;
+}
+
+/* increments */
+main > #tab-increments:not(.hide) {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.iwrap {
+  display: grid;
+  grid-template-columns: minmax(320px, 390px) 1fr;
+  gap: 18px;
+  align-items: start;
+}
+#tab-increments .ipanel {
+  top: 0;
+  max-height: calc(100dvh - 60px);
+}
+.icur {
+  font-size: 12.5px;
+  background: #f7f9ff;
+  border: 1px solid #dde5fa;
+  border-radius: 6px;
+  padding: 7px 9px;
+  margin: -2px 0 12px;
+}
+.icur:empty {
+  display: none;
+}
+.iplan ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.iplan li {
+  margin-bottom: 4px;
+}
+.iview .dtools {
+  margin-bottom: 8px;
+}
+#iLog td {
+  vertical-align: top;
+}
+@media (max-width: 1100px) {
+  .iwrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  main > #tab-increments:not(.hide) {
+    overflow: visible;
+  }
+}
+#iLog td,
+#iLog th {
+  white-space: normal;
+}
+#iLog .pill {
+  margin-left: 4px;
+}
+
+/* ---------- company letterheads: Orbit Studio, Crimson Works, Tealwave Technosoft ----------
+   Each has its own design. The PDF draws the same thing at the same places (drawBrandLetterhead). */
+.a4 .lh.lhb {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 110px;
+  margin: 0;
+  border: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.lh.lhb::after {
+  /* the rule under the letterhead, as wide as the text */
+  content: '';
+  position: absolute;
+  left: 85px;
+  right: 85px;
+  top: 109px;
+  border-top: 1.6px solid var(--ac);
+}
+.lh.lhb.dbl::after {
+  height: 3px;
+  border-bottom: 0.6px solid var(--ac);
+}
+.lh.lhb .band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+  background: var(--bd);
+}
+.lh.lhb .band.lined {
+  border-bottom: 2px solid var(--bl);
+}
+.lh.lhb-left img {
+  position: absolute;
+  left: 85px;
+  top: 35px;
+  height: 46px;
+  width: auto;
+  max-width: 300px;
+  object-fit: contain;
+  object-position: left center;
+}
+.lh.lhb-left .r {
+  position: absolute;
+  right: 85px;
+  top: 31px;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  line-height: 15.1px;
+  color: #555;
+}
+.lh.lhb-left .r .n {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.3px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  color: var(--ink);
+}
+.lh.lhb .r a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.lh.lhb-center img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+  height: 56px;
+  width: auto;
+  max-width: 340px;
+  object-fit: contain;
+}
+.lh.lhb-center .c {
+  position: absolute;
+  left: 85px;
+  right: 85px;
+  top: 81px;
+  text-align: center;
+  font-size: 11.5px;
+  line-height: 15px;
+  color: #555;
+}
+.lh.lhb-center .c a {
+  color: var(--ac);
+  text-decoration: none;
+}
+.a4 .lfband {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+}

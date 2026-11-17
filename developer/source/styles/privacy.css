@@ -1,0 +1,50 @@
+/* the wrapper must look exactly like the text around it, whatever 'span' rules the page has */
+.amt-mask {
+  font: inherit !important;
+  color: inherit !important;
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  border: 0 !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  white-space: inherit !important;
+}
+body.hide-money .amt-mask:not(.show) {
+  filter: blur(6px);
+  cursor: pointer;
+  user-select: none;
+  display: inline-block !important;
+  transition: filter 0.15s;
+}
+body.hide-money .amt-mask:not(.show):hover {
+  filter: blur(4px);
+}
+body.hide-money #dbTip .amt-mask {
+  filter: blur(6px);
+}
+#navEye {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 600;
+}
+#navEye svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+#navEye.on {
+  background: #f0f3fe;
+  border-color: #c9d6f8;
+  color: var(--navy);
+}
